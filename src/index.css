@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Merriweather:wght@400&display=swap');
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ACE153;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9fd140;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid #ACE153;
+  outline-offset: 2px;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Utility classes for consistent spacing */
+/* .section-padding {
+  @apply py-20 lg:py-32;
+}
+
+.container-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+} */
+
+/* Custom button hover effects */
+.btn-hover-lime:hover {
+  background-color: #9fd140;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(172, 225, 83, 0.3);
+}
+
+/* Form input styles */
+/* .form-input {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electric-lime focus:border-transparent font-sans transition-all duration-200;
+} */
+
+.form-input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(172, 225, 83, 0.15);
+}
+
+/* Card hover effects */
+/* .card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-2;
+} */
+
+/* Gradient text */
+/* .gradient-text {
+  @apply bg-gradient-to-r from-electric-lime to-green-500 bg-clip-text text-transparent;
+} */
+
+/* Loading animation */
+@keyframes pulse-lime {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-lime {
+  animation: pulse-lime 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .text-responsive-hero {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-responsive-hero {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .text-responsive-hero {
+    font-size: 4.5rem;
+    line-height: 1.1;
+  }
+}
