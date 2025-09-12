@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // 👇 Import your logo from assets (adjust the path if needed)
 import logo from "../assets/paynergy icon w bg.png";
@@ -9,6 +10,13 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      once: true,
+      easing: "ease-out",
+    });
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -34,10 +42,8 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+    <nav
+      data-aos="fade-down"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
@@ -68,7 +74,7 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`font-sans font-medium transition-colors hover:text-electric-lime ${
+                className={`font-sans font-medium cursor-pointer transition-colors hover:text-electric-lime ${
                   isScrolled ? "text-charcoal" : "text-white lg:text-charcoal"
                 }`}
               >
@@ -104,13 +110,10 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={
-          isOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }
-        }
-        transition={{ duration: 0.3 }}
-        className="lg:hidden bg-white shadow-lg"
+      <div
+        className={`lg:hidden bg-white shadow-lg overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <div className="px-4 pt-2 pb-4 space-y-2">
           {navItems.map((item) => (
@@ -129,8 +132,8 @@ const Navbar = () => {
             Get Early Access
           </button>
         </div>
-      </motion.div>
-    </motion.nav>
+      </div>
+    </nav>
   );
 };
 
