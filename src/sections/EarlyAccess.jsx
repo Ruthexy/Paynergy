@@ -30,16 +30,16 @@ const EarlyAccess = () => {
   };
 
   const utilityProviders = [
-    "Pacific Gas & Electric (PG&E)",
-    "Southern California Edison",
-    "Con Edison (New York)",
-    "Florida Power & Light",
-    "Duke Energy",
-    "Exelon (ComEd)",
-    "Dominion Energy",
-    "NextEra Energy",
-    "American Electric Power",
-    "Other/Not Listed",
+    "Eko Electricity Distribution Company (EKEDC) – Lagos",
+  "Ikeja Electric (IE) – Lagos",
+  "Abuja Electricity Distribution Company (AEDC) – FCT, Kogi, Niger, Nasarawa",
+  "Lagos State Water Corporation (LSWC)",
+  "Abuja Water Board",
+  "Kano State Water Board",
+   "Dominion Energy",
+  "Water Boards",
+  "Gas & Energy Providers",
+  "TV & Internet (DSTV, Startimes, MTN, etc.)"
   ];
 
   if (isSubmitted) {
