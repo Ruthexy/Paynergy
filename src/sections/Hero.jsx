@@ -99,19 +99,19 @@ const Hero = () => {
             className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-sans font-bold text-electric-lime mb-2">
+              <div className="text-3xl lg:text-4xl font-sans font-bold text-white mb-2">
                 15+
               </div>
               <div className="text-white/80 font-sans">Utility Providers</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-sans font-bold text-electric-lime mb-2">
+              <div className="text-3xl lg:text-4xl font-sans font-bold text-white mb-2">
                 2.5k+
               </div>
               <div className="text-white/80 font-sans">Beta Users</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-sans font-bold text-electric-lime mb-2">
+              <div className="text-3xl lg:text-4xl font-sans font-bold text-white mb-2">
                 98%
               </div>
               <div className="text-white/80 font-sans">Satisfaction Rate</div>
