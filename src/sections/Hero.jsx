@@ -11,8 +11,20 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-deep-evergreen via-green-800 to-green-900"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden 
+                 bg-gradient-to-br from-deep-evergreen via-green-800 to-green-900"
     >
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/heroImage.png" 
+          alt="Paynergy Background"
+          className="w-full h-full object-cover"
+        />
+        {/* Overlay to darken image for text readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-electric-lime rounded-full blur-3xl animate-float"></div>
@@ -26,6 +38,7 @@ const Hero = () => {
         ></div>
       </div>
 
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div data-aos="fade-up" className="max-w-4xl mx-auto">
           <h1 className="font-sans font-black text-4xl sm:text-5xl lg:text-7xl text-white mb-6 leading-tight">
@@ -38,7 +51,7 @@ const Hero = () => {
 
           <p className="font-sans text-xl lg:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
             Consolidate all your bills into one simple payment. Recharge your
-            Electricity, Gas and diesel, Dstv and more with ease. Save time,
+            Electricity, Gas and Diesel, DStv and more with ease. Save time,
             reduce stress, and never miss a utility payment again.
           </p>
 

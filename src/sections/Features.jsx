@@ -55,14 +55,17 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 lg:py-32 bg-green-100">
+    <section
+      id="features"
+      className="py-20 lg:py-32 bg-green-700 bg-gradient-to-br from-deep-evergreen via-green-800 to-green-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-4">
+          <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
             Everything You Need
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Powerful features designed to make utility bill management
             effortless
           </p>
@@ -93,7 +96,7 @@ const Features = () => {
 
         {/* Security Badges */}
         <div className="mt-20 text-center">
-          <p className="text-gray-500 mb-8">Trusted by thousands of users</p>
+          <p className="text-white mb-8">Trusted by thousands of users</p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {[
               "Bank-Level Security",

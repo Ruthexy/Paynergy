@@ -35,6 +35,7 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Title */}
         <div data-aos="fade-up" className="text-center mb-16">
           <h2 className="font-sans font-bold text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
             How It Works
@@ -44,49 +45,65 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 200}
-              className="relative"
-            >
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-electric-lime rounded-full mb-6">
-                  <step.icon className="w-8 h-8 text-charcoal" />
-                </div>
-                <h3 className="font-sans font-bold text-xl lg:text-2xl text-charcoal mb-4">
-                  {step.title}
-                </h3>
-                <p className="font-sans text-charcoal/70 leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-electric-lime/30 -translate-x-1/2"></div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div data-aos="fade-up" className="text-center mt-16">
-          <p className="font-sans text-lg text-charcoal/70 mb-6">
-            Ready to simplify your utility payments?
-          </p>
-          <button
-            onClick={() =>
-              document
-                .querySelector("#early-access")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="bg-electric-lime text-charcoal px-8 py-4 rounded-lg font-sans font-bold text-lg hover:bg-lime-400 transition-colors"
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Image */}
+          <div
+            data-aos="fade-right"
+            className="flex justify-center lg:justify-start"
           >
-            Join the Waitlist
-          </button>
+            <img
+              src="/hero-img.png"
+              alt="How Paynergy Works"
+              className="w-full h-full max-h-[600px] object-contain rounded-xl"
+            />
+          </div>
+
+          {/* Right Steps */}
+          <div data-aos="fade-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+              {steps.map((step, index) => (
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
+                  className="relative text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-electric-lime rounded-full mb-6">
+                    <step.icon className="w-8 h-8 text-charcoal" />
+                  </div>
+                  <h3 className="font-sans font-bold text-xl lg:text-2xl text-charcoal mb-4">
+                    {step.title}
+                  </h3>
+                  <p className="font-sans text-charcoal/70 leading-relaxed">
+                    {step.description}
+                  </p>
+
+                  {/* Connector line */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-electric-lime/30 -translate-x-1/2"></div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div data-aos="fade-up" className="text-center mt-16">
+              <p className="font-sans text-lg text-charcoal/70 mb-6">
+                Ready to simplify your utility payments?
+              </p>
+              <button
+                onClick={() =>
+                  document
+                    .querySelector("#early-access")
+                    .scrollIntoView({ behavior: "smooth" })
+                }
+                className="bg-electric-lime text-charcoal px-8 py-4 rounded-lg font-sans font-bold text-lg hover:bg-lime-400 transition-colors"
+              >
+                Join the Waitlist
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

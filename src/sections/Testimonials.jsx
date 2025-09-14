@@ -60,8 +60,15 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 lg:py-32 bg-green-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="testimonials"
+      className="relative py-20 lg:py-32 bg-cover bg-center"
+      style={{ backgroundImage: "url('/testimonials.png')" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/80"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="font-sans font-bold text-3xl sm:text-4xl lg:text-5xl text-charcoal mb-4">
